@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/loginbackground"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:context=".LoginAndFriend.LoginActivity">
+
+    <ImageView
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo" />
+    <ImageView
+        android:layout_width="252dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/solution_font"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:layout_height="24dp"
+        android:src="@drawable/deskripsilogo"/>
+
+    <RelativeLayout
+        android:id="@+id/whitebox"
+        android:layout_below="@+id/solution_font"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/radius_corner"
+        android:elevation="4dp"
+        android:orientation="vertical"
+      >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHighlight="#4F8D46"
+                android:textColorHint="#4F8D46"
+                android:shadowColor="#4F8D46"
+                android:textColor="#4F8D46"
+                android:hint="Email">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/whitebox2"
+        android:layout_below="@+id/whitebox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/radius_corner"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHighlight="#4F8D46"
+            android:textColorHint="#4F8D46"
+            android:shadowColor="#4F8D46"
+            android:textColor="#4F8D46"
+            android:hint="Password">
+        </androidx.appcompat.widget.AppCompatEditText>
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_below="@id/whitebox2"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="95dp"
+        android:layout_marginRight="95dp"
+        android:background="@drawable/radius_corner_login"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+
+
+    <TextView
+        android:id="@+id/tv_dontHave"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/segoe_ui"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingTop="5dp"
+        android:text="@string/dont_have_account"/>
+</RelativeLayout>
