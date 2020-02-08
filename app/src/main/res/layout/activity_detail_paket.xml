@@ -23,10 +23,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:scaleType="fitXY"
-                tools:background="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/tv_jenis"
@@ -58,7 +58,18 @@
                 app:layout_constraintBottom_toBottomOf="@+id/tv_jenis"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toTopOf="@+id/tv_jenis"
-                tools:text="4 Hari" />
+                tools:text="4" />
+
+            <TextView
+                android:id="@+id/source_hari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/hari"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_durasi"
+                app:layout_constraintStart_toEndOf="@+id/tv_durasi"
+                app:layout_constraintTop_toTopOf="@+id/tv_durasi" />
 
             <TextView
                 android:id="@+id/tv_desa"
@@ -192,7 +203,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/img_agendesa"
                 app:layout_constraintStart_toEndOf="@+id/img_agendesa"
                 app:layout_constraintTop_toTopOf="@+id/img_agendesa"
-                tools:text="Paijo Alexander" />
+                android:text="Paijo Alexander" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
@@ -204,15 +215,25 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tv_harga"
+                    android:id="@+id/source_rp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:text="@string/rp"
+                    android:textColor="@android:color/black"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toEndOf="@+id/source_rp"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Rp400.000"
-                    android:textColor="@android:color/black"/>
+                    tools:text="400.000" />
 
                 <TextView
                     android:id="@+id/source_perorang"

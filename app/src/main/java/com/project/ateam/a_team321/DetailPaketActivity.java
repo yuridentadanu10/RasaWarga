@@ -21,6 +21,9 @@ import com.project.ateam.a_team321.LoginAndFriend.LoginActivity;
 import com.project.ateam.a_team321.LoginAndFriend.REgisterActivity;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+
 public class DetailPaketActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     ImageView imgPhotoPaket, imgAgendesa;
@@ -78,7 +81,16 @@ public class DetailPaketActivity extends AppCompatActivity implements View.OnCli
                         String fasilitas = document.getString("fasilitas");
                         String img_url = document.getString("img_url");
                         String jenis = document.getString("jenis");
-                       String harga = document.getLong("harga").toString();
+                        String harga = document.getLong("harga").toString();
+
+                        DecimalFormat kursIdr = (DecimalFormat) DecimalFormat.getCurrencyInstance();
+                        DecimalFormatSymbols formatRp = new DecimalFormatSymbols();
+                        formatRp.setCurrencySymbol("Rp");
+                        formatRp.setMonetaryDecimalSeparator(',');
+                        formatRp.setGroupingSeparator('.');
+                        kursIdr.setDecimalFormatSymbols(formatRp);
+
+                        String hargaIndo = kursIdr.format(Long.valueOf(harga));
 
                         String durasi = document.getLong("durasi").toString();
 
@@ -88,7 +100,7 @@ public class DetailPaketActivity extends AppCompatActivity implements View.OnCli
                         tvDeskripsiDesa.setText(deskripsiDesa);
                         tvDeskripsiKegiatan.setText(deskripsiKegiatan);
                         tvJenis.setText(jenis);
-                        tvHarga.setText(harga);
+                        tvHarga.setText(hargaIndo);
                         tvDurasi.setText(durasi);
                        // tvfa.setText(fasilitas);
                         Picasso.get()

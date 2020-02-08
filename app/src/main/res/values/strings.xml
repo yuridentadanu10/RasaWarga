@@ -102,6 +102,7 @@
 
     <string name="daftar">DAFTAR</string>
     <string name="tambah">TAMBAH</string>
+    <string name="hari">Hari</string>
 
     <string-array name="hari_array">
         <item>1 Hari</item>
