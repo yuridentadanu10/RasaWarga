@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".Fragment.DaftarAgenDesaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -193,14 +194,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:padding="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/radius_corner_blue"
+            android:padding="16dp"
             android:text="@string/lanjut"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView13" />
+            app:layout_constraintTop_toBottomOf="@+id/cardView13"
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

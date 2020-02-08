@@ -90,5 +90,8 @@
     <string name="temukan_dan_gali_potensi_desa_mu_menggunakan_artificial_intilligence">Temukan dan gali potensi desa mu menggunakan Artificial Intilligence.</string>
     <string name="scan_desa">Scan desa</string>
     <string name="pesanan">Pesanan</string>
+    <string name="pesan_masuk">Pesan masuk</string>
+    <string name="kembali">Kembali</string>
+    <string name="simpan">simpan</string>
 
 </resources>
