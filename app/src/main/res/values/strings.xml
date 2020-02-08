@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">A-Team321</string>
+    <string name="home">Home</string>
+    <string name="pesan">Pesan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="temukan_wisata_live_in">Temukan wisata live-in</string>
+    <string name="apa_yang_anda_cari">Apa yang anda cari?</string>
+    <string name="rekomendasi_kami">Rekomendasi kami</string>
+    <string name="daftar_jadi_agen_desa">Daftar Jadi Agen Desa</string>
+    <string name="no_ktp">No. KTP</string>
+    <string name="nama_desa">Nama desa</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="kabupaten">Kabupaten/Kota</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="nama_pokdarwis">Nama Pokdarwis</string>
+    <string name="lanjut">lanjut</string>
+    <string name="batal">batal</string>
+    <string name="seperti_apa_desa_anda">Seperti apa desa anda?</string>
+    <string name="potensi_wisata">Potensi wisata</string>
+    <string name="wisata_alam">Wisata alam</string>
+    <string name="wisata_historis">Wisata historis</string>
+    <string name="wisata_religi">Wisata religi</string>
+    <string name="wisata_arsitektur">Wisata arsitektur</string>
+    <string name="lainnya">Lainnya</string>
+    <string name="kelengkapan">Kelengkapan</string>
+    <string name="organisasi_pemuda_karang_taruna">Organisasi pemuda / karang taruna</string>
+    <string name="pokdarwis">Pokdarwis</string>
+    <string name="koperasi">Koperasi</string>
+    <string name="tempat_ibadah">Tempat ibadah</string>
+    <string name="balai_desa">Balai desa</string>
+    <string name="lapangan">Lapangan</string>
+    <string name="seperti_apa_paket_wisata_live_in_anda">Seperti apa paket wisata live-in anda?</string>
+    <string name="fasilitas">Fasilitas</string>
+    <string name="deskripsi_desa">Deskripsi desa</string>
+    <string name="deskripsi_kegiatan">Deskripsi kegiatan</string>
+    <string name="pilih_lokasi">pilih lokasi</string>
+    <string name="tambah_gambar">tambah gambar</string>
 </resources>
