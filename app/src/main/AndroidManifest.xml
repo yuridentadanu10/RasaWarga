@@ -11,6 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginAndFriend.REgisterActivity"></activity>
         <activity android:name=".LoginAndFriend.LoginActivity" />
+        <activity android:name=".BayarFragment"></activity>
+        <activity android:name=".PesanPaketActivity" />
+        <activity android:name=".DetailPaketActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

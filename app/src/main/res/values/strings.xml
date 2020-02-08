@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">A-Team321</string>
-<<<<<<< Updated upstream
     <string name="home">Home</string>
     <string name="pesan">Pesan</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="temukan_wisata_live_in">Temukan wisata live-in</string>
     <string name="apa_yang_anda_cari">Apa yang anda cari?</string>
@@ -38,10 +35,7 @@
     <string name="deskripsi_kegiatan">Deskripsi kegiatan</string>
     <string name="pilih_lokasi">pilih lokasi</string>
     <string name="tambah_gambar">tambah gambar</string>
-=======
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dont_have_account">Belum Punya Akun</string>
     <string name="sudahpunyaakun">Sudah Punya Akun ?</string>
     <string name="input_error_name123">Nama tidak bisa kosong\\</string>
@@ -50,5 +44,29 @@
     <string name="input_error_password">Password harus diisi</string>
     <string name="input_error_password_length">Paswword harus lebih dari 6 karakter</string>
     <string name="input_confirm_false">Password anda tidak sama</string>
-    >>>>>>> Stashed changes
+
+    <string name="tambahkan_tuan_rumah">Tambahkan tuan rumah</string>
+    <string name="nama_kepala_keluarga">Nama kepala keluarga</string>
+    <string name="deskripsi_keluarga">Deskripsi Keluarga</string>
+    <string name="nomor_ktp_kepala_keluarga">Nomor KTP kepala keluarga</string>
+    <string name="unggah_foto_ktp">Unggah foto KTP</string>
+    <string name="unggah_foto_rumah">Unggah foto rumah</string>
+    <string name="selamat">Selamat! \n Desa anda sudah terdaftar</string>
+    <string name="ok">OK</string>
+    <string name="yang_akan_anda_lakukan">Yang akan anda lakukan</string>
+    <string name="agendesa">Agendesa</string>
+    <string name="per_orang">Per orang</string>
+    <string name="pesan_sekarang">Pesan Sekarang</string>
+    <string name="pesan_paket_wisata">Pesan paket wisata</string>
+    <string name="jumlah_peserta">Jumlah peserta</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="strip">-</string>
+    <string name="pilih_tuan_rumah">Pilih tuan rumah</string>
+    <string name="pilih_metode_pembayaran">Pilih Metode Pembayaran</string>
+    <string name="total_pembayaran">Total Pembayaran</string>
+    <string name="rp">Rp</string>
+    <string name="transfer_bank">Transfer bank</string>
+    <string name="indomaret">Indomaret</string>
+    <string name="gopay">GoPay</string>
+    <string name="bayar">Bayar</string>
 </resources>
