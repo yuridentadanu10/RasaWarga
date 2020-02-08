@@ -160,7 +160,14 @@
         <EditText
             android:id="@+id/edt_deskripsi_desa"
             android:layout_width="match_parent"
-            android:layout_height="70dp" />
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:background="@android:color/transparent"
+            android:lines="3"
+            android:maxLines="6"
+            android:maxLength="300"
+            android:scrollbars="vertical"
+            android:gravity="top|start"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -191,7 +198,14 @@
         <EditText
             android:id="@+id/edt_deskripsi_kegiatan"
             android:layout_width="match_parent"
-            android:layout_height="70dp" />
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:lines="3"
+            android:maxLines="6"
+            android:maxLength="300"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -200,8 +214,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/radius_corner_upload"
+        android:padding="16dp"
         android:text="@string/pilih_lokasi"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView8" />
 
@@ -209,28 +226,49 @@
         android:id="@+id/btn_tambah_gambar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/radius_corner_upload"
+        android:padding="16dp"
         android:text="@string/tambah_gambar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView8" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/btn_pilih_lokasi" />
 
-    <Button
-        android:id="@+id/batal"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/btn_lanjut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pilih_lokasi"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/btn_batal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="8dp"
         android:text="@string/batal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_lanjut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_lanjut" />
 
     <Button
-        android:id="@+id/lanjut"
+        android:id="@+id/btn_lanjut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:padding="16dp"
+        android:background="@drawable/radius_corner_blue"
         android:text="@string/lanjut"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -73,6 +73,7 @@
     <string name="gopay">GoPay</string>
     <string name="bayar">Bayar</string>
 
+
     <string name="Welcome1_title">Temukan wisata Live-in</string>
     <string name="weclome1_description">Kamu bisa mencari wisata Live-in yang cocok untukmu</string>
     <string name="welcome2_title">Buat wisata Live-in mu!</string>
@@ -83,6 +84,5 @@
     <string name="weclome4_description">Gunakan fitur analisa untuk mengetahui dan menggali potensi desamu menggunakan Artificial Intelligence</string>
     <string name="next">LANJUT</string>
     <string name="start">LANJUT</string>
-    >>>>>>> Stashed changes
->>>>>>> Stashed changes
+
 </resources>

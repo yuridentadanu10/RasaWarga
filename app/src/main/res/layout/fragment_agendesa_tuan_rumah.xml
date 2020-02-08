@@ -29,6 +29,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="15dp"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/source_tuan_rumah">
@@ -37,6 +38,9 @@
             android:id="@+id/edt_kepala_keluarga"
             android:layout_width="match_parent"
             android:layout_height="42dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:inputType="text"
             android:hint="@string/nama_kepala_keluarga" />
 
     </androidx.cardview.widget.CardView>
@@ -49,6 +53,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="15dp"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView9">
@@ -56,7 +61,15 @@
         <EditText
             android:id="@+id/edt_deskripsi_keluarga"
             android:layout_width="match_parent"
-            android:layout_height="98dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:lines="4"
+            android:maxLines="8"
+            android:maxLength="300"
+            android:scrollbars="vertical"
             android:hint="@string/deskripsi_keluarga" />
 
     </androidx.cardview.widget.CardView>
@@ -69,6 +82,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="15dp"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView10">
@@ -77,6 +91,9 @@
             android:id="@+id/edt_nomer_ktp"
             android:layout_width="match_parent"
             android:layout_height="42dp"
+            android:layout_margin="8dp"
+            android:inputType="text"
+            android:background="@android:color/transparent"
             android:hint="@string/nomor_ktp_kepala_keluarga" />
 
     </androidx.cardview.widget.CardView>
@@ -89,6 +106,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:padding="16dp"
+        android:background="@drawable/radius_corner_upload"
         android:text="@string/unggah_foto_ktp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -102,28 +121,36 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:padding="16dp"
+        android:background="@drawable/radius_corner_upload"
         android:text="@string/unggah_foto_rumah"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_unggah_ktp_keluarga" />
 
-    <Button
-        android:id="@+id/batal"
+    <TextView
+        android:id="@+id/tv_batal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="8dp"
         android:text="@string/batal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_lanjut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_lanjut" />
 
     <Button
-        android:id="@+id/lanjut"
+        android:id="@+id/btn_lanjut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:padding="16dp"
+        android:background="@drawable/radius_corner_blue"
         android:text="@string/lanjut"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
