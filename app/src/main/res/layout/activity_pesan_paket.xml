@@ -49,7 +49,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <Spinner
-            android:id="@+id/sp_durasi"
+            android:id="@+id/sp_jumlah_peserta"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:layout_marginStart="16dp"
@@ -69,7 +69,7 @@
             android:text="@string/tanggal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sp_durasi" />
+            app:layout_constraintTop_toBottomOf="@+id/sp_jumlah_peserta" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView12"

@@ -121,12 +121,23 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:padding="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/radius_corner_upload"
+        android:padding="16dp"
         android:text="@string/unggah_foto_rumah"
+        app:layout_constraintBottom_toTopOf="@+id/view10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_unggah_ktp_keluarga" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_unggah_ktp_keluarga"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/btn_lanjut" />
 
     <TextView
         android:id="@+id/tv_batal"

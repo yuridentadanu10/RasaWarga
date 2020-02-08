@@ -50,9 +50,17 @@
             android:background="@drawable/radius_corner"
             android:padding="16dp"
             android:text="Tambah tuan rumah"
-            app:layout_constraintBottom_toTopOf="@+id/btn_simpan"
+            app:layout_constraintBottom_toTopOf="@+id/view11"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/btn_simpan" />
 
         <TextView
             android:id="@+id/tv_kembali"
@@ -74,7 +82,7 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/radius_corner_blue"
             android:padding="16dp"
-            android:text="@string/simpan"
+            android:text="@string/daftar"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

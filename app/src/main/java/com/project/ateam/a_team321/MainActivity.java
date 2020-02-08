@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                         pageContent = new BerandaFragment();
                         break;
                     case R.id.nav_pesan:
-                        pageContent = new BerandaFragment();
+                        pageContent = new PesanFragment();
                         break;
                     case R.id.nav_akun:
                         pageContent = new AkunFragment();

@@ -95,6 +95,9 @@
     <string name="simpan">simpan</string>
     <string name="confirm_permission">This app need to access files on your device.</string>
     <string name="confirm_camera1">This app need to access camera on your device.</string>
+    <string name="daftar">Daftar</string>
+    <string name="maturnuwun_mas_sudah_mampir_ke_desa_kami">Maturnuwun mas, sudah mampir ke desa kami</string>
+    <string name="pesanan_berhasil">Pesanan berhasil!</string>
 
     <string-array name="hari_array">
         <item>1 Hari</item>
