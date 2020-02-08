@@ -85,5 +85,9 @@
     <string name="next">LANJUT</string>
     <string name="start">LANJUT</string>
     <string name="gambar_jenis">Gambar Jenis</string>
+    <string name="tambahkan_tuan_rumah">Tambahkan tuan rumah</string>
+    <string name="analisis_desa">Analisis desa</string>
+    <string name="temukan_dan_gali_potensi_desa_mu_menggunakan_artificial_intilligence">Temukan dan gali potensi desa mu menggunakan Artificial Intilligence.</string>
+    <string name="scan_desa">Scan desa</string>
 
 </resources>

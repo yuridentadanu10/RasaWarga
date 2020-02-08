@@ -1,4 +1,4 @@
-package com.project.ateam.a_team321;
+package com.project.ateam.a_team321.model.jenis;
 
 public class Jenis {
     String jenis;

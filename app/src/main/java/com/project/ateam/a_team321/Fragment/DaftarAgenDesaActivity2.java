@@ -15,10 +15,10 @@ import com.project.ateam.a_team321.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AgendesaPaketFragment extends Fragment {
+public class DaftarAgenDesaActivity2 extends Fragment {
 
 
-    public AgendesaPaketFragment() {
+    public DaftarAgenDesaActivity2() {
         // Required empty public constructor
     }
 
@@ -27,7 +27,7 @@ public class AgendesaPaketFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_agendesa_paket, container, false);
+        return inflater.inflate(R.layout.fragment_agendesa_desa, container, false);
     }
 
 }

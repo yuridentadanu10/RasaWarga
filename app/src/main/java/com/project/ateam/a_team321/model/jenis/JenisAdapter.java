@@ -1,4 +1,4 @@
-package com.project.ateam.a_team321;
+package com.project.ateam.a_team321.model.jenis;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.project.ateam.a_team321.R;
 
 import java.util.ArrayList;
 

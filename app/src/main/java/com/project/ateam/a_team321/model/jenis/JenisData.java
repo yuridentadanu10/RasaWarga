@@ -1,4 +1,7 @@
-package com.project.ateam.a_team321;
+package com.project.ateam.a_team321.model.jenis;
+
+import com.project.ateam.a_team321.R;
+import com.project.ateam.a_team321.model.jenis.Jenis;
 
 import java.util.ArrayList;
 

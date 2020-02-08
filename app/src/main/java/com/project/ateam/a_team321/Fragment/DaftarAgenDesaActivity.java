@@ -11,13 +11,14 @@ import android.view.ViewGroup;
 
 import com.project.ateam.a_team321.R;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_akun extends Fragment {
+public class DaftarAgenDesaActivity extends Fragment {
 
 
-    public Fragment_akun() {
+    public DaftarAgenDesaActivity() {
         // Required empty public constructor
     }
 
@@ -26,7 +27,7 @@ public class Fragment_akun extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_akun, container, false);
+        return inflater.inflate(R.layout.fragment_agendesa_daftar, container, false);
     }
 
 }
