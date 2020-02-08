@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AnalisisFragment">
+    tools:context=".imageRecognition.AnalisisFragment">
 
     <TextView
         android:id="@+id/source_analisis"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/source_analisis_deskripsi" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView14"
+        android:id="@+id/btn_kamera"
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_marginStart="32dp"
@@ -52,7 +52,7 @@
         android:backgroundTint="#68C7DB"
         android:elevation="8dp"
         app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView15"
+        app:layout_constraintEnd_toStartOf="@+id/btn_gallery"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/place_holder">
@@ -90,13 +90,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView15"
+        android:id="@+id/btn_gallery"
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_marginTop="32dp"
@@ -106,7 +108,7 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView14"
+        app:layout_constraintStart_toEndOf="@+id/btn_kamera"
         app:layout_constraintTop_toBottomOf="@+id/place_holder">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -145,5 +147,12 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/confident_level"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="confident"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

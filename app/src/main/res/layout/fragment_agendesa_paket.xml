@@ -97,6 +97,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:visibility="gone"
         android:layout_marginEnd="16dp"
         android:text="Lainnya"
         app:layout_constraintEnd_toStartOf="@+id/guideline"

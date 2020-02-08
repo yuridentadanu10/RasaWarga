@@ -23,6 +23,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.project.ateam.a_team321.R;
+import com.project.ateam.a_team321.welcomeAndFriend.WelcomeActivity;
 
 public class REgisterActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String MY_PREFS_NAME = "MyPrefsFile";
@@ -49,7 +50,7 @@ public class REgisterActivity extends AppCompatActivity implements View.OnClickL
         db = FirebaseFirestore.getInstance();
         btnHaveAccount = findViewById(R.id.tv_dontHave);
       //  progressBar = findViewById(R.id.progressbar);
-        progressBar.setVisibility(View.GONE);
+//        progressBar.setVisibility(View.GONE);
         btnRegister.setOnClickListener(this);
         btnHaveAccount.setOnClickListener(this);
     }
@@ -112,13 +113,13 @@ public class REgisterActivity extends AppCompatActivity implements View.OnClickL
 
 
 
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         finish();
-                        startActivity(new Intent(REgisterActivity.this, Welcome_Activity.class));
+                        startActivity(new Intent(REgisterActivity.this, WelcomeActivity.class));
                         progressBar.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
 

@@ -1,4 +1,4 @@
-package com.project.ateam.a_team321;
+package com.project.ateam.a_team321.bottomNavigation;
 
 
 import android.os.Bundle;
@@ -16,7 +16,12 @@ import com.project.ateam.a_team321.model.jenis.Jenis;
 import com.project.ateam.a_team321.model.jenis.JenisAdapter;
 import com.project.ateam.a_team321.model.jenis.JenisData;
 
+
 import java.util.ArrayList;
+
+
+import com.project.ateam.a_team321.R;
+
 
 
 /**

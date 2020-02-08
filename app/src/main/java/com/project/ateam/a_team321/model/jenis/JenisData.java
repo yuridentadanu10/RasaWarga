@@ -22,7 +22,7 @@ public class JenisData {
             R.drawable.arsi
     };
 
-    static ArrayList<Jenis> getListData() {
+    public static ArrayList<Jenis> getListData() {
         ArrayList<Jenis> list = new ArrayList<>();
         for (int position = 0; position < jenis.length; position++){
             Jenis jenisList = new Jenis();

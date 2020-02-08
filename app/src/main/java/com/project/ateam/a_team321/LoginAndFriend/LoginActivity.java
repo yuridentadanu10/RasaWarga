@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         db = FirebaseFirestore.getInstance();
         btnDontHaveAccount = findViewById(R.id.tv_dontHave);
       //  progressBar = findViewById(R.id.progressbar);
-        progressBar.setVisibility(View.GONE);
+//        progressBar.setVisibility(View.GONE);
         btnLogin.setOnClickListener(this);
         btnDontHaveAccount.setOnClickListener(this);
 
@@ -91,11 +91,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
+//                progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
                     finish();
 

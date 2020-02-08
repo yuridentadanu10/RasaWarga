@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.project.ateam.a_team321.R;
+import com.project.ateam.a_team321.daftarAgendesa.DaftarAgenDesaActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,13 +59,13 @@ public class AkunFragment extends Fragment implements View.OnClickListener {
         tvPesanan = view.findViewById(R.id.tv_pesanan);
         tvKeluar = view.findViewById(R.id.tv_keluar);
 
-        getStatus(status);
+       String status1= getStatus(status);
 
-        if (status.equals("biasa")){
+        if (status1.equals("biasa")){
             tvEditDesa.setVisibility(View.GONE);
             tvEditTuanRumah.setVisibility(View.GONE);
             tvPesanan.setVisibility(View.GONE);
-        } else if (status.equals("Agendesa")) {
+        } else if (status1.equals("Agendesa")) {
             tvJadiAgendesa.setVisibility(View.GONE);
         }
 
@@ -77,7 +78,7 @@ public class AkunFragment extends Fragment implements View.OnClickListener {
     }
 
     private String getStatus(String status){
-        status = "Agendesa";
+        status = "biasa";
 
         return status;
     }

@@ -85,13 +85,27 @@
     <string name="next">LANJUT</string>
     <string name="start">LANJUT</string>
     <string name="gambar_jenis">Gambar Jenis</string>
-    <string name="tambahkan_tuan_rumah">Tambahkan tuan rumah</string>
     <string name="analisis_desa">Analisis desa</string>
     <string name="temukan_dan_gali_potensi_desa_mu_menggunakan_artificial_intilligence">Temukan dan gali potensi desa mu menggunakan Artificial Intilligence.</string>
     <string name="scan_desa">Scan desa</string>
+
     <string name="pesanan">Pesanan</string>
     <string name="pesan_masuk">Pesan masuk</string>
     <string name="kembali">Kembali</string>
     <string name="simpan">simpan</string>
+    <string name="confirm_permission">This app need to access files on your device.</string>
+    <string name="confirm_camera1">This app need to access camera on your device.</string>
+
+    <string-array name="hari_array">
+        <item>1 Hari</item>
+        <item>2 Hari</item>
+        <item>3 Hari</item>
+        <item>4 Hari</item>
+        <item>5 Hari</item>
+        <item>6 Hari</item>
+        <item>7 Hari</item>
+
+    </string-array>
+
 
 </resources>
