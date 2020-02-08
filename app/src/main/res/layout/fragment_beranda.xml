@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".bottomNavigation.BerandaFragment">
 
     <LinearLayout
@@ -93,6 +94,7 @@
         android:layout_marginEnd="16dp"
         android:text="@string/apa_yang_anda_cari"
         android:textSize="24sp"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,6 +123,7 @@
         android:layout_marginEnd="16dp"
         android:text="@string/rekomendasi_kami"
         android:textSize="24sp"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

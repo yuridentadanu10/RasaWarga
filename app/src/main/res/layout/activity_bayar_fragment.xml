@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".BayarFragment">
 
     <TextView
@@ -16,6 +17,7 @@
         android:layout_marginEnd="16dp"
         android:text="@string/pilih_metode_pembayaran"
         android:textSize="24sp"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,6 +40,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="@string/total_pembayaran"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -70,7 +73,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:elevation="8dp"
+        android:elevation="15dp"
         android:background="@drawable/radius_corner_upload"
         android:text="@string/transfer_bank"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +87,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:elevation="8dp"
+        android:elevation="15dp"
         android:background="@drawable/radius_corner_upload"
         android:text="@string/gopay"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +101,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:elevation="8dp"
+        android:elevation="15dp"
         android:background="@drawable/radius_corner_upload"
         android:text="@string/indomaret"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,6 +122,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginBottom="8dp"
         android:text="@string/batal"
+        android:textColor="#848484"
         android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/bayar"
@@ -131,6 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:elevation="8dp"
         android:padding="16dp"
         android:background="@drawable/radius_corner_blue"
         android:text="@string/bayar"

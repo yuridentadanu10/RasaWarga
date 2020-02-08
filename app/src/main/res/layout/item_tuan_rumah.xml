@@ -20,7 +20,8 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Keluarga Bp. Suherman" />
+            tools:text="Keluarga Bp. Suherman"
+            android:textColor="#1D1D1D"/>
 
         <TextView
             android:id="@+id/tv_deskripsi_keluarga"

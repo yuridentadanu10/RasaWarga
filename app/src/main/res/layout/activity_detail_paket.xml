@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".DetailPaketActivity">
 
     <LinearLayout
@@ -126,7 +127,8 @@
             android:layout_marginBottom="8dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            tools:text="Desa wisata yang pernah dinobatkan sebagai salah satu Desa Wisata Terbaik se-Asean ini terus dikembangkan salah satunya melalui program-program wisata yang berbasis edukasi dan budaya. Hal ini menjadi suatu daya tarik wisata, minat khusus bagi orang yang ingin berinteraksi dengan masyarakat lokal yang masih memegang teguh tradisi."/>
+            tools:text="Desa wisata yang pernah dinobatkan sebagai salah satu Desa Wisata Terbaik se-Asean ini terus dikembangkan salah satunya melalui program-program wisata yang berbasis edukasi dan budaya. Hal ini menjadi suatu daya tarik wisata, minat khusus bagi orang yang ingin berinteraksi dengan masyarakat lokal yang masih memegang teguh tradisi."
+            android:textColor="#1D1D1D"/>
 
         <TextView
             android:id="@+id/source_yang_akan_dilakukan"
@@ -135,6 +137,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/yang_akan_anda_lakukan"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold"/>
 
@@ -146,7 +149,8 @@
             android:layout_marginBottom="8dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            tools:text="Selama kegiatan live-in 4 hari anda akan disuguhkan berbagai kegiatan desa seperti membajak sawah, menanam padi, serta memberi makan hewan ternak. Anda juga akan diajak menelusuri alam Dusun Nglanggeran yang identik dengan gunung api purbanya. Di sini anda akan menginap dengan keluarga Pak Hariadi, salah satu warga Dusun Nglanggeran yang berprofesi sebagai petani"/>
+            tools:text="Selama kegiatan live-in 4 hari anda akan disuguhkan berbagai kegiatan desa seperti membajak sawah, menanam padi, serta memberi makan hewan ternak. Anda juga akan diajak menelusuri alam Dusun Nglanggeran yang identik dengan gunung api purbanya. Di sini anda akan menginap dengan keluarga Pak Hariadi, salah satu warga Dusun Nglanggeran yang berprofesi sebagai petani"
+            android:textColor="#1D1D1D"/>
 
         <TextView
             android:id="@+id/source_agendesa"
@@ -157,6 +161,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:text="@string/agendesa"
+            android:textColor="#1D1D1D"
             android:textSize="24sp"
             android:textStyle="bold"/>
 
@@ -172,7 +177,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/circle"
-                android:backgroundTint="@color/colorAccent"
+                android:src="@drawable/ic_person_black_24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -183,6 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:textSize="20sp"
+                android:textColor="#1D1D1D"
                 app:layout_constraintBottom_toBottomOf="@+id/img_agendesa"
                 app:layout_constraintStart_toEndOf="@+id/img_agendesa"
                 app:layout_constraintTop_toTopOf="@+id/img_agendesa"
@@ -205,7 +211,8 @@
                     android:layout_marginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Rp400.000" />
+                    tools:text="Rp400.000"
+                    android:textColor="@android:color/black"/>
 
                 <TextView
                     android:id="@+id/source_perorang"
@@ -227,9 +234,10 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:padding="4dp"
-                    android:background="@drawable/rectangle"
+                    android:padding="16dp"
+                    android:background="@drawable/radius_corner_blue"
                     android:text="@string/pesan_sekarang"
+                    android:textColor="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
