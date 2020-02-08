@@ -11,6 +11,10 @@
         android:title="@string/pesan"/>
 
     <item
+        android:id="@+id/nav_analisa"
+        android:icon="@drawable/ca"
+        android:title="Analisa"/>
+    <item
         android:id="@+id/nav_akun"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="Akun"/>

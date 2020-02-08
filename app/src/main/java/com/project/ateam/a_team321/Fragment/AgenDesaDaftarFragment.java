@@ -1,4 +1,4 @@
-package com.project.ateam.a_team321;
+package com.project.ateam.a_team321.Fragment;
 
 
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.project.ateam.a_team321.R;
 
 
 /**

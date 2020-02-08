@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">A-Team321</string>
+<<<<<<< Updated upstream
     <string name="home">Home</string>
     <string name="pesan">Pesan</string>
 
@@ -37,4 +38,17 @@
     <string name="deskripsi_kegiatan">Deskripsi kegiatan</string>
     <string name="pilih_lokasi">pilih lokasi</string>
     <string name="tambah_gambar">tambah gambar</string>
+=======
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dont_have_account">Belum Punya Akun</string>
+    <string name="sudahpunyaakun">Sudah Punya Akun ?</string>
+    <string name="input_error_name123">Nama tidak bisa kosong\\</string>
+    <string name="input_error_email">Email tidak boleh kosomg</string>
+    <string name="input_error_email_invalid">input yang anda masukan bukan email</string>
+    <string name="input_error_password">Password harus diisi</string>
+    <string name="input_error_password_length">Paswword harus lebih dari 6 karakter</string>
+    <string name="input_confirm_false">Password anda tidak sama</string>
+    >>>>>>> Stashed changes
 </resources>

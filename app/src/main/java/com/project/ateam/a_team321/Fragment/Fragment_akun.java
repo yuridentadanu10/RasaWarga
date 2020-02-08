@@ -1,4 +1,4 @@
-package com.project.ateam.a_team321;
+package com.project.ateam.a_team321.Fragment;
 
 
 import android.os.Bundle;
@@ -9,14 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.project.ateam.a_team321.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AgendesaDesaFragment extends Fragment {
+public class Fragment_akun extends Fragment {
 
 
-    public AgendesaDesaFragment() {
+    public Fragment_akun() {
         // Required empty public constructor
     }
 
@@ -25,7 +26,7 @@ public class AgendesaDesaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_agendesa_desa, container, false);
+        return inflater.inflate(R.layout.fragment_fragment_akun, container, false);
     }
 
 }
