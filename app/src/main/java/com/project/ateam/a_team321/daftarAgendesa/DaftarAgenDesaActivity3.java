@@ -21,7 +21,7 @@ public class DaftarAgenDesaActivity3 extends AppCompatActivity implements View.O
     CheckBox cb_1,cb_2,cb_3,cb_4,cb_5;
     Button btn_pilihLokasi,btn_tambahgambar,btn_lanjut;
     String durasi_spinner_pilih;
-    EditText et_deskripsiDesa,et_deskripsiKegiatan;
+    EditText et_deskripsiDesa,et_deskripsiKegiatan,etHarga;
 
     ArrayList<String> ar = new ArrayList<String>();
     @Override
@@ -31,6 +31,7 @@ public class DaftarAgenDesaActivity3 extends AppCompatActivity implements View.O
 
         et_deskripsiDesa = findViewById(R.id.edt_deskripsi_desa);
         et_deskripsiKegiatan = findViewById(R.id.edt_deskripsi_kegiatan);
+        etHarga = findViewById(R.id.edt_harga);
         cb_1 = findViewById(R.id.cb_makan);
         cb_2 = findViewById(R.id.cb_penginapan);
         cb_3 = findViewById(R.id.cb_guide);
@@ -81,8 +82,11 @@ public class DaftarAgenDesaActivity3 extends AppCompatActivity implements View.O
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_lanjut:
+                getCheckbox();
                 String arrayFasilitas = ar.toString();
                 Bundle extras = getIntent().getExtras();
+
+                extras.putString("harga",etHarga.getText().toString());
                 extras.putString("fasilitas",arrayFasilitas);
                 extras.putString("deskripsiDesa",et_deskripsiDesa.getText().toString());
                 extras.putString("deskripsiKegiatan",et_deskripsiKegiatan.getText().toString());

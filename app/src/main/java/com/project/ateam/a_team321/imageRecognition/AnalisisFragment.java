@@ -191,7 +191,6 @@ public class AnalisisFragment extends BaseFragment implements View.OnClickListen
             mTextView.setText(label.getConfidence() + "\n\n");
             Log.d(TAG, "labels "+labels+" label ===="+label.getText() +" TEXTVIEW ==="+mTextView );
 
-
             String  makananSementara = label.getText();
             float  deteksijelekSementara = label.getConfidence();
 

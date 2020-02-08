@@ -95,11 +95,13 @@
     <string name="simpan">simpan</string>
     <string name="confirm_permission">This app need to access files on your device.</string>
     <string name="confirm_camera1">This app need to access camera on your device.</string>
-    <string name="daftar">Daftar</string>
     <string name="maturnuwun_mas_sudah_mampir_ke_desa_kami">Maturnuwun mas, sudah mampir ke desa kami</string>
     <string name="pesanan_berhasil">Pesanan berhasil!</string>
     <string name="rasawarga">rasawarga</string>
     <string name="harga">Harga</string>
+
+    <string name="daftar">DAFTAR</string>
+    <string name="tambah">TAMBAH</string>
 
     <string-array name="hari_array">
         <item>1 Hari</item>
@@ -109,6 +111,16 @@
         <item>5 Hari</item>
         <item>6 Hari</item>
         <item>7 Hari</item>
+
+    </string-array>
+    <string-array name="orang_array">
+        <item>1 Orang</item>
+        <item>2 Orang</item>
+        <item>3 Orang</item>
+        <item>4 Orang</item>
+        <item>5 Orang</item>
+        <item>6 Orang</item>
+        <item>7 Orang</item>
 
     </string-array>
 

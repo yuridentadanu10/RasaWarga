@@ -79,7 +79,7 @@
             android:inputType="textEmailAddress"
             android:textColorHighlight="#848484"
             android:textColorHint="#848484"
-            android:shadowColor="##848484"
+            android:shadowColor="#848484"
             android:textColor="#848484"
             android:hint="Email">
         </androidx.appcompat.widget.AppCompatEditText>

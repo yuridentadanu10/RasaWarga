@@ -154,14 +154,14 @@
         app:layout_constraintTop_toTopOf="@+id/btn_lanjut" />
 
     <Button
-        android:id="@+id/btn_lanjut"
+        android:id="@+id/btn_tambah_kepala"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:padding="16dp"
         android:background="@drawable/radius_corner_blue"
-        android:text="@string/lanjut"
+        android:text="@string/tambah"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

@@ -217,7 +217,6 @@
                 android:scrollbars="vertical"/>
 
         </androidx.cardview.widget.CardView>
-
         <Button
             android:id="@+id/btn_pilih_lokasi"
             android:layout_width="wrap_content"
@@ -302,6 +301,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:inputType="number"
             android:elevation="8dp"
             android:padding="8dp"
             android:background="@drawable/radius_corner"

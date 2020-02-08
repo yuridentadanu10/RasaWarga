@@ -20,7 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".daftarAgendesa.DaftarAgenDesaActivity4"></activity>
+        <activity android:name=".ActivitySearch"></activity>
+        <activity android:name=".daftarAgendesa.TambahTuanRumahActivity" />
+        <activity android:name=".daftarAgendesa.DaftarAgenDesaActivity4" />
         <activity android:name=".daftarAgendesa.DaftarAgenDesaActivity3" />
         <activity android:name=".daftarAgendesa.DaftarAgenDesaActivity2" />
         <activity android:name=".daftarAgendesa.DaftarAgenDesaActivity" />

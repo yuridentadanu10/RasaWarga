@@ -20,8 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, pageContent).commit();
+        }else {
+
+        }
+
 
         BottomNavigationView mBottomNav = findViewById(R.id.nav_bottom);
+
         mBottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

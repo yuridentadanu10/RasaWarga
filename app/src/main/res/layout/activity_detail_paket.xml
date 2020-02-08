@@ -22,6 +22,7 @@
                 android:id="@+id/img_list_photo"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
+                android:scaleType="fitXY"
                 tools:background="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -110,11 +111,10 @@
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/source_fasilitas"
-                tools:listitem="@layout/item_fasilitas"/>
-
-
+                tools:listitem="@layout/item_fasilitas" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
