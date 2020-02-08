@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">A-Team321</string>
+
     <string name="home">Home</string>
     <string name="pesan">Pesan</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -36,6 +37,7 @@
     <string name="pilih_lokasi">pilih lokasi</string>
     <string name="tambah_gambar">tambah gambar</string>
 
+
     <string name="dont_have_account">Belum Punya Akun</string>
     <string name="sudahpunyaakun">Sudah Punya Akun ?</string>
     <string name="input_error_name123">Nama tidak bisa kosong\\</string>
@@ -44,6 +46,7 @@
     <string name="input_error_password">Password harus diisi</string>
     <string name="input_error_password_length">Paswword harus lebih dari 6 karakter</string>
     <string name="input_confirm_false">Password anda tidak sama</string>
+
 
     <string name="tambahkan_tuan_rumah">Tambahkan tuan rumah</string>
     <string name="nama_kepala_keluarga">Nama kepala keluarga</string>
@@ -69,4 +72,17 @@
     <string name="indomaret">Indomaret</string>
     <string name="gopay">GoPay</string>
     <string name="bayar">Bayar</string>
+
+    <string name="Welcome1_title">Temukan wisata Live-in</string>
+    <string name="weclome1_description">Kamu bisa mencari wisata Live-in yang cocok untukmu</string>
+    <string name="welcome2_title">Buat wisata Live-in mu!</string>
+    <string name="weclome2_description">Jadilah Agendesa dengan membuat wisata live-in di desa mu</string>
+    <string name="weclome3_description">Libatkan warga desamu!</string>
+    <string name="weclome_description">Ajak warga desa untuk menjadi tuan rumah live-in</string>
+    <string name="Welcome4_title">Gali potensi desamu!</string>
+    <string name="weclome4_description">Gunakan fitur analisa untuk mengetahui dan menggali potensi desamu menggunakan Artificial Intelligence</string>
+    <string name="next">LANJUT</string>
+    <string name="start">LANJUT</string>
+    >>>>>>> Stashed changes
+>>>>>>> Stashed changes
 </resources>
