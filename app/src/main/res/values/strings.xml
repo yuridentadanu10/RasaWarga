@@ -98,6 +98,8 @@
     <string name="daftar">Daftar</string>
     <string name="maturnuwun_mas_sudah_mampir_ke_desa_kami">Maturnuwun mas, sudah mampir ke desa kami</string>
     <string name="pesanan_berhasil">Pesanan berhasil!</string>
+    <string name="rasawarga">rasawarga</string>
+    <string name="harga">Harga</string>
 
     <string-array name="hari_array">
         <item>1 Hari</item>

@@ -30,6 +30,7 @@
         android:layout_marginEnd="16dp"
         android:elevation="8dp"
         android:orientation="vertical"
+        app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resource_pesan_masuk">
@@ -42,8 +43,8 @@
                 android:id="@+id/img_photo"
                 android:layout_width="54dp"
                 android:layout_height="54dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/circle"
-                android:backgroundTint="@android:color/darker_gray"
                 android:src="@drawable/ic_person_black_24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,8 +64,9 @@
 
             <TextView
                 android:id="@+id/tv_pesan"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/maturnuwun_mas_sudah_mampir_ke_desa_kami"
                 app:layout_constraintEnd_toEndOf="parent"
