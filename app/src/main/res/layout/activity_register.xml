@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:background="@android:color/transparent"
+            android:inputType="text"
             android:textColorHighlight="#4F8D46"
             android:textColorHint="#4F8D46"
             android:shadowColor="#4F8D46"
@@ -75,11 +76,12 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
             android:textColorHighlight="#4F8D46"
             android:textColorHint="#4F8D46"
             android:shadowColor="#4F8D46"
             android:textColor="#4F8D46"
-            android:hint="Nama Lengkap">
+            android:hint="Email">
         </androidx.appcompat.widget.AppCompatEditText>
 
 
@@ -107,11 +109,12 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:background="@android:color/transparent"
+            android:inputType="textPassword"
             android:textColorHighlight="#4F8D46"
             android:textColorHint="#4F8D46"
             android:shadowColor="#4F8D46"
             android:textColor="#4F8D46"
-            android:hint="Email">
+            android:hint="Password">
         </androidx.appcompat.widget.AppCompatEditText>
 
 
@@ -137,11 +140,12 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:background="@android:color/transparent"
+        android:inputType="textPassword"
         android:textColorHighlight="#4F8D46"
         android:textColorHint="#4F8D46"
         android:shadowColor="#4F8D46"
         android:textColor="#4F8D46"
-        android:hint="Password">
+        android:hint="Confirm Password">
     </androidx.appcompat.widget.AppCompatEditText>
 
 

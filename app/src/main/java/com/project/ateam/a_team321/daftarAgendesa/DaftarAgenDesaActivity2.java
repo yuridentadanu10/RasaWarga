@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.project.ateam.a_team321.R;
@@ -18,12 +19,16 @@ public class DaftarAgenDesaActivity2 extends AppCompatActivity implements View.O
     private RadioButton radioButton;
     CheckBox cb_1,cb_2,cb_3,cb_4,cb_5,cb_6;
     Button btnLanjut;
+    TextView tvKembali;
+
+    Bundle extras = new Bundle();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_agendesa_desa);
         radioGroup =  findViewById(R.id.radioGroup);
         cb_1 = findViewById(R.id.cb_organisasi);
+        extras = getIntent().getExtras();
         cb_2 = findViewById(R.id.cb_pokdarwis);
         cb_3 = findViewById(R.id.cb_koperasi);
         cb_4 = findViewById(R.id.cb_tempat_ibadah);
@@ -32,9 +37,11 @@ public class DaftarAgenDesaActivity2 extends AppCompatActivity implements View.O
 
 
         btnLanjut = findViewById(R.id.btn_lanjut);
+        tvKembali = findViewById(R.id.tv_kembali);
 
 
         btnLanjut.setOnClickListener(this);
+        tvKembali.setOnClickListener(this);
 
 
     }
@@ -55,7 +62,6 @@ public class DaftarAgenDesaActivity2 extends AppCompatActivity implements View.O
         switch (view.getId()) {
             case R.id.btn_lanjut:
                 String jenisWisata = addListenerOnButton();
-                Bundle extras = getIntent().getExtras();
                 extras.putString("jenisWisata",jenisWisata);
 
                 Intent mainIntent = new Intent(DaftarAgenDesaActivity2.this,DaftarAgenDesaActivity3.class);
@@ -66,7 +72,11 @@ public class DaftarAgenDesaActivity2 extends AppCompatActivity implements View.O
                 break;
             case R.id.btn_unggah_ktp:
 
-                //unggah
+                //unggahkhj
+                break;
+
+            case R.id.tv_kembali :
+                finish();
                 break;
         }
 

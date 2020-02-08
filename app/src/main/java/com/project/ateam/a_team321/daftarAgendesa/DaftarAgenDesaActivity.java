@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.project.ateam.a_team321.R;
 
 public class DaftarAgenDesaActivity extends AppCompatActivity implements View.OnClickListener{
-EditText et_KTP,et_namaDesa,et_Provinsi,et_kabupatenKota,et_kecamatan,et_NamaPokdarwis;
-Button btn_UnggahKTP,btnLanjut;
+    EditText et_KTP, et_namaDesa,et_Provinsi, et_kabupatenKota, et_kecamatan, et_NamaPokdarwis;
+    Button btn_UnggahKTP, btnLanjut;
+    TextView tvBatal;
+    Bundle dataBundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +30,16 @@ Button btn_UnggahKTP,btnLanjut;
         et_NamaPokdarwis = findViewById(R.id.edt_nama_pokdarwis);
         btn_UnggahKTP = findViewById(R.id.btn_unggah_ktp);
         btnLanjut = findViewById(R.id.btn_lanjut);
+        tvBatal = findViewById(R.id.tv_batal);
 
         btnLanjut.setOnClickListener(this);
         btn_UnggahKTP.setOnClickListener(this);
+        tvBatal.setOnClickListener(this);
     }
 
     public void sendBundle(){
 
-        Bundle dataBundle = new Bundle();
+        dataBundle = new Bundle();
         dataBundle.putString("noKTP",et_KTP.getText().toString());
         dataBundle.putString("namaDesa",et_namaDesa.getText().toString());
         dataBundle.putString("provinsi",et_Provinsi.getText().toString());
@@ -57,6 +62,10 @@ Button btn_UnggahKTP,btnLanjut;
             case R.id.btn_unggah_ktp:
                 //unggah
                 break;
+            case R.id.tv_batal:
+                finish();
+                break;
+
         }
 
 

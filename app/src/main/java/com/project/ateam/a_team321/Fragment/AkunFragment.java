@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.project.ateam.a_team321.R;
@@ -27,6 +28,8 @@ public class AkunFragment extends Fragment implements View.OnClickListener {
     private ImageView imgPhoto;
     private TextView tvNama, tvEditProfil, tvStatus, tvHistori, tvJadiAgendesa, tvEditDesa,
             tvEditTuanRumah, tvPesanan, tvKeluar;
+
+    private LinearLayout llJadiAgenDesa, llEditDesa, llEditTuanRumah, llPesanan;
 
 
     public AkunFragment() {
@@ -48,6 +51,11 @@ public class AkunFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        llJadiAgenDesa = view.findViewById(R.id.ll_jadi_agen_desa);
+        llEditDesa = view.findViewById(R.id.ll_edit_desa);
+        llEditTuanRumah = view.findViewById(R.id.ll_edit_tuan_rumah);
+        llPesanan = view.findViewById(R.id.ll_pesanan);
+
         imgPhoto = view.findViewById(R.id.img_photo);
         tvNama = view.findViewById(R.id.tv_agendesa);
         tvEditProfil = view.findViewById(R.id.tv_edit_profil);
@@ -62,11 +70,11 @@ public class AkunFragment extends Fragment implements View.OnClickListener {
        String status1= getStatus(status);
 
         if (status1.equals("biasa")){
-            tvEditDesa.setVisibility(View.GONE);
-            tvEditTuanRumah.setVisibility(View.GONE);
-            tvPesanan.setVisibility(View.GONE);
+            llEditDesa.setVisibility(View.GONE);
+            llEditTuanRumah.setVisibility(View.GONE);
+            llPesanan.setVisibility(View.GONE);
         } else if (status1.equals("Agendesa")) {
-            tvJadiAgendesa.setVisibility(View.GONE);
+            llJadiAgenDesa.setVisibility(View.GONE);
         }
 
         tvHistori.setOnClickListener(this);
