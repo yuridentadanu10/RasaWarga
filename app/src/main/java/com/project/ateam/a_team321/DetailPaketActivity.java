@@ -32,7 +32,7 @@ public class DetailPaketActivity extends AppCompatActivity implements View.OnCli
     RecyclerView rvFasilitas;
     Button btnPesan;
 
-
+    String harga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +81,7 @@ public class DetailPaketActivity extends AppCompatActivity implements View.OnCli
                         String fasilitas = document.getString("fasilitas");
                         String img_url = document.getString("img_url");
                         String jenis = document.getString("jenis");
-                        String harga = document.getLong("harga").toString();
+                         harga = document.getLong("harga").toString();
 
                         DecimalFormat kursIdr = (DecimalFormat) DecimalFormat.getCurrencyInstance();
                         DecimalFormatSymbols formatRp = new DecimalFormatSymbols();
@@ -129,9 +129,12 @@ public class DetailPaketActivity extends AppCompatActivity implements View.OnCli
                 switch (view.getId()) {
                     case R.id.btn_pesan:
                         Intent intent = new Intent(DetailPaketActivity.this,PesanPaketActivity.class);
-                        intent.putExtra("namaDesa",tvNamaDesa.getText().toString());
-                        intent.putExtra("harga",tvHarga.getText().toString());
-                        intent.putExtra("durasi",tvDurasi.getText().toString());
+                        Bundle danu = new Bundle();
+                        danu.putString("namaDesa",tvNamaDesa.getText().toString());
+                        danu.putString("harga",harga);
+                        danu.putString("durasi",tvDurasi.getText().toString());
+                        intent.putExtras(danu);
+                        startActivity(intent);
 
                         break;
                 }

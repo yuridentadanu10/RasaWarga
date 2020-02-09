@@ -26,12 +26,22 @@ public class BayarFragment extends AppCompatActivity implements View.OnClickList
         btnIndomaret = findViewById(R.id.btn_indomaret);
         btnBayar = findViewById(R.id.bayar);
 
+
+        Bundle bundleFinal = getIntent().getExtras();
+        String namaWarga=bundleFinal.getString("nama_warga");
+        int harga=bundleFinal.getInt("totalHarga");
+        String namaDesa=
+        String provinsi=bundleFinal.getString("provinsi");
+
+
         btnTransfer.setOnClickListener(this);
         btnGopay.setOnClickListener(this);
         btnIndomaret.setOnClickListener(this);
         btnBayar.setOnClickListener(this);
         tvKembali.setOnClickListener(this);
     }
+
+
 
     @Override
     public void onClick(View view) {

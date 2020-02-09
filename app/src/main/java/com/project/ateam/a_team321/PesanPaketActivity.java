@@ -1,11 +1,13 @@
 package com.project.ateam.a_team321;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +16,15 @@ import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.project.ateam.a_team321.adapterPilihKeluarga.adapterPilihKeluarga;
+import com.project.ateam.a_team321.daftarAgendesa.KepalaKeluarga;
+
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -29,6 +40,10 @@ public class PesanPaketActivity extends AppCompatActivity implements View.OnClic
     Calendar calStart;
     Button btnLanjut;
 
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    FirebaseAuth mAuth;
+    private adapterPilihKeluarga adapter;
+    Bundle bundle = getIntent().getExtras();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +53,12 @@ public class PesanPaketActivity extends AppCompatActivity implements View.OnClic
         btnDurasi = findViewById(R.id.btn_durasi);
         tvDurasi = findViewById(R.id.tv_durasi);
         tvDurasiBerakhir = findViewById(R.id.tv_durasi_akhir);
+        setUpRecyclerView();
 
         calStart = Calendar.getInstance();
 
+
+btnLanjut.setOnClickListener(this);
         btnDurasi.setOnClickListener(this);
 
 
@@ -55,7 +73,47 @@ public class PesanPaketActivity extends AppCompatActivity implements View.OnClic
 
         spinner.setOnItemSelectedListener(this);
     }
+    
+    private void setUpRecyclerView() {
+        Query query = db.collection("users").document("FDmbN96I4SgsGUs41wPv0GGa1T93").collection("rumahDesa").orderBy("nama_warga").limit(10);
 
+        FirestoreRecyclerOptions<KepalaKeluarga> options = new FirestoreRecyclerOptions.Builder<KepalaKeluarga>()
+                .setQuery(query, KepalaKeluarga.class)
+                .build();
+
+        adapter = new adapterPilihKeluarga(options);
+
+        RecyclerView recyclerView = findViewById(R.id.rv_tuan_rumah);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new adapterPilihKeluarga.OnItemClickListener() {
+            @Override
+            public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+                String namaDesa = documentSnapshot.getId();
+                Log.d("SSSSSSSSSSSSSS", "onItemClick: "+namaDesa);
+                bundle.putString("nama_warga",namaDesa);
+            }
+        });
+
+
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter.startListening();
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
+    
+    
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -65,27 +123,48 @@ public class PesanPaketActivity extends AppCompatActivity implements View.OnClic
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         calStart.set(year, month, day);
+                        Intent hargaIntent =getIntent();
+                        int durasi=Integer.parseInt(hargaIntent.getExtras().getString("durasi"));
+
+
                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy");
                         tvDurasi.setText(dateFormat.format(calStart.getTime()));
+
+                        calStart.add(Calendar.DAY_OF_MONTH,durasi );
+                        tvDurasiBerakhir.setText(dateFormat.format(calStart.getTime()));
+
                         // TODO: set durasi akhir
                     }
                 }, startDate.get(Calendar.YEAR), startDate.get(Calendar.MONTH), startDate.get(Calendar.DATE)).show();
+
+                break;
             }
+            case R.id.btn_lanjut: {
+                    bundle.putInt("totalHarga",totalHarga);
+                    Intent intent = new Intent(PesanPaketActivity.this,BayarFragment.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                break;
+            }
+
         }
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         jumlah_orang_pilih = adapterView.getItemAtPosition(i).toString();
-        Intent hargaIntent =getIntent();
-        String harga=hargaIntent.getExtras().getString("harga");
+
+        String harga=bundle.getString("harga");
         int harga21 = Integer.parseInt(harga);
         char s=jumlah_orang_pilih.charAt(0);
         String jumlah212 =Character.toString(s);
         int jumlah_orang = Integer.parseInt(jumlah212);
         totalHarga = jumlah_orang* harga21;
 
+
     }
+
+
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {

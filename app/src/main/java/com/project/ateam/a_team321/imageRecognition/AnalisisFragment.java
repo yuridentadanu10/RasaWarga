@@ -27,9 +27,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Transaction;
 import com.google.firebase.ml.common.FirebaseMLException;
 import com.google.firebase.ml.common.modeldownload.FirebaseLocalModel;
 import com.google.firebase.ml.common.modeldownload.FirebaseModelManager;
@@ -38,6 +46,7 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabel;
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabeler;
 import com.google.firebase.ml.vision.label.FirebaseVisionOnDeviceAutoMLImageLabelerOptions;
+import com.project.ateam.a_team321.PostAnalisisActivity;
 import com.project.ateam.a_team321.R;
 
 import java.util.List;
@@ -58,7 +67,7 @@ public class AnalisisFragment extends BaseFragment implements View.OnClickListen
     private static final String TAG = "Image Scanner";
     private static final String LOCAL_MODEL_NAME = "my_local_model";
     private FirebaseVisionImageLabeler labeler;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     CardView btnPhoto, btnGallery;
 
 
@@ -153,17 +162,77 @@ public class AnalisisFragment extends BaseFragment implements View.OnClickListen
     }
 
 
+    private void cekdatabase ( String wisata){
+         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        DocumentReference docRef = db.collection("paket_wisata").document(wisata);
 
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+                       String wisata = document.getString("nama");
+                       String deskripsi = document.getString("deskripsi");
+                        String img_url = document.getString("url_gambar");
+                       Intent intent = new Intent(getActivity(),PostAnalisisActivity.class);
+                       intent.putExtra("wisata",wisata);
+                        intent.putExtra("deskripsi",wisata);
+                        intent.putExtra("img_url",img_url);
+                        startActivity(intent);
+                    } else {
+                        Log.d(TAG, "No such document");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+            }
+        });
+
+
+    }
 
     private void runMyModel(Bitmap bitmap) {
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
+         final FirebaseFirestore db = FirebaseFirestore.getInstance();
         labeler.processImage(image).addOnSuccessListener(new OnSuccessListener<List<FirebaseVisionImageLabel>>() {
             @Override
             public void onSuccess(List<FirebaseVisionImageLabel> labels) {
                 extractLabel(labels);
-                Log.d(TAG, "onSuccess:JAAAAAAAAAAAAAAAAANGKTIK  "+ makanan);
+         //       Log.d(TAG, "onSuccess:JAAAAAAAAAAAAAAAAANGKTIK  "+
+
                 if(deteksijelek>0.5) {
-                    //cekdatabase(makanan);
+
+                    final DocumentReference userRef = db.collection("paket_wisata").document(makanan);
+                    userRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                        @Override
+                        public void onEvent(@Nullable DocumentSnapshot snapshot,
+                                            @Nullable FirebaseFirestoreException e) {
+                            if (e != null) {
+                                //  Log.w(TAG, "Listen failed.", e);
+                                return;
+                            }
+
+                            if (snapshot != null && snapshot.exists()) {
+
+
+                                String wisata = snapshot.getString("nama");
+                                String deskripsi = snapshot.getString("deskripsi");
+                                String img_url = snapshot.getString("url_gambar");
+                                Intent intent = new Intent(getActivity(),PostAnalisisActivity.class);
+                                intent.putExtra("wisata",wisata);
+                                intent.putExtra("deskripsi",deskripsi);
+                                intent.putExtra("img_url",img_url);
+                                startActivity(intent);
+
+
+
+                            } else {
+                                // Log.d(TAG, "Current data: null");
+                            }
+                        }
+                    });
 
                 }
                 else{

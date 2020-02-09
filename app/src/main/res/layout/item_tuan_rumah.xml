@@ -15,6 +15,7 @@
         android:layout_height="16dp"
         android:background="@drawable/item_circle_done"
         android:backgroundTint="#68C7DB"
+        android:visibility="gone"
         android:elevation="16dp"
         android:src="@drawable/ic_done_24px"
         app:layout_constraintStart_toStartOf="parent"
