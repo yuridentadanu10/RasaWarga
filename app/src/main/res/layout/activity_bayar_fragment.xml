@@ -66,6 +66,19 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_total_bayar"
         app:layout_constraintTop_toTopOf="@+id/tv_total_bayar" />
 
+    <ImageView
+        android:id="@+id/img_check"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/item_circle_done"
+        android:backgroundTint="#68C7DB"
+        android:elevation="16dp"
+        android:src="@drawable/ic_done_24px"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_transfer"
+        app:layout_constraintStart_toStartOf="@+id/btn_transfer"
+        app:layout_constraintTop_toTopOf="@+id/btn_transfer" />
+
     <Button
         android:id="@+id/btn_transfer"
         android:layout_width="match_parent"
@@ -80,6 +93,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_total_bayar" />
 
+    <ImageView
+        android:id="@+id/img_check2"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/item_circle_done"
+        android:backgroundTint="#68C7DB"
+        android:elevation="16dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_done_24px"
+        app:layout_constraintBottom_toTopOf="@+id/btn_gopay"
+        app:layout_constraintStart_toStartOf="@+id/btn_gopay"
+        app:layout_constraintTop_toTopOf="@+id/btn_gopay" />
+
     <Button
         android:id="@+id/btn_gopay"
         android:layout_width="match_parent"
@@ -93,6 +119,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_transfer" />
+
+    <ImageView
+        android:id="@+id/img_check3"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/item_circle_done"
+        android:backgroundTint="#68C7DB"
+        android:elevation="16dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_done_24px"
+        app:layout_constraintBottom_toTopOf="@+id/btn_indomaret"
+        app:layout_constraintStart_toStartOf="@+id/btn_indomaret"
+        app:layout_constraintTop_toTopOf="@+id/btn_indomaret" />
 
     <Button
         android:id="@+id/btn_indomaret"
